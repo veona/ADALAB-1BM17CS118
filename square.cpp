@@ -1,30 +1,39 @@
+#include<stdio.h>
 #include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-int main()
+int main(int argc,char **argv)
 {
-	int n,s=1;
-	cout<<"enter no";
-	cin>>n;
-	int x=0,y=n/2,mid;
-	while(x<=y)
+	int t;
+	cout<<"enter the no of test";
+	cin>>t;
+	for(int i=0;i<t;i++)
 	{
-		mid=(x+y)/2;
-		if(mid*mid==n)
+		int n,k,f=0;
+		cout<<"enter no of integers";
+		cin>>n;
+		cout<<"enter integers to be found";
+		cin>>k;
+		int ar[n]={0};
+		cout<<"enter integers";
+		for(int j=0;j<n;j++)
+			cin>>ar[j];
+		int b=0,e=n-1,m=(e+b)/2;
+		while(b<e)
 		{
-			s=mid;
-			break;
+			if(ar[m]==k)
+				{cout<<"1";
+				f=1; 
+				break;
+				}
+				else if(ar[m]>k)
+					e=m-1;
+				else
+						b=m+1;
+					m=(e+b)/2;
 		}
-		else if(mid*mid<n)
-		{
-			x=mid+1;
-		}
-		else
-			y=mid-1;
+		if(f==0)
+			cout<<"1";
 	}
-	cout<<"sq root";
-	if(s==1)
-		cout<<x-1;
-		else
-			cout<<s;
-			return 0;
+	return 0;
 }
