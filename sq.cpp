@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-	int n,s=0;
+	int n,s=1;
 	cout<<"enter the no\n";
 	cin>>n;
 	int x=0,y=n/2,mid;
