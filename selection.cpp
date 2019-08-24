@@ -17,7 +17,7 @@ int main(int argc,char **argv)
 	cin>>k;
 	for(int i=0;i<n-1;i++)
 	{
-		min=1;
+		min=i;
 	for(int j=1;j<n;j++)
 	{
 		if(arr[j]<arr[min])
